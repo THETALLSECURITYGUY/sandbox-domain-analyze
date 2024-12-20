@@ -1,0 +1,17 @@
+# Virtual Environment
+sandbox_env/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Streamlit
+.streamlit/
+
+# IDE specific files
+.vscode/
+.idea/ 

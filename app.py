@@ -4,10 +4,15 @@ import socket
 import requests
 from datetime import datetime
 import pandas as pd
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 def check_blacklists(domain):
-    # Using VirusTotal API (you'll need to sign up for an API key)
-    API_KEY = "08a085dae547e01aa9494df1abc5c35cb999ff2c813cbc537d6185fb523f8d3d"
+    # Get API key from environment variable
+    API_KEY = os.getenv('VIRUSTOTAL_API_KEY')
     url = f"https://www.virustotal.com/vtapi/v2/url/report"
     params = {
         'apikey': API_KEY,
